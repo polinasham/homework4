@@ -2,12 +2,13 @@
 
 int main() {
     float num[10];
-    int K = 2; 
- 
-    scanf("%f %f %f %f %f %f %f %f %f %f",
-          &num[0], &num[1], &num[2], &num[3], &num[4],
-          &num[5], &num[6], &num[7], &num[8], &num[9]);
- 
+    int K;
+    scanf("%d", &K); 
+
+    for (int i = 0; i < 10; i++) {
+        scanf("%f", &num[i]);
+    }
+
     if (K < 0) {
         K += 10;
     }
@@ -26,10 +27,10 @@ int main() {
             }
         }
     }
+
     for (int i = 0; i < 10; i++) {
         printf("%.2f ", shifted[i]);
     }
     printf("\n");
-
     return 0;
 }
