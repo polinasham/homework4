@@ -10,6 +10,6 @@ int main() {
         }
         sum += num[i];
     }  
-    printf("Среднее арифметическое: %.3lf\n", sum / 10);
+    printf("Среднее арифметическое: %.2lf\n", sum / 10);
     return 0;
 }
