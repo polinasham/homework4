@@ -1,36 +1,30 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
-    float num[10];
+    float arr[10];
     int K;
-    scanf("%d", &K); 
 
     for (int i = 0; i < 10; i++) {
-        scanf("%f", &num[i]);
+        scanf("%f", &arr[i]);
     }
+    scanf("%d", &K);
 
-    if (K < 0) {
-        K += 10;
+    int shift = K % 10; 
+    if (shift < 0) {
+        shift += 10; 
     }
 
     float shifted[10];
-    for (int i = 0; i < 10; i++) {
-        shifted[(i + K) % 10] = num[i];
-    }
 
-    for (int i = 0; i < 9; i++) {
-        for (int j = i + 1; j < 10; j++) {
-            if (shifted[i] < shifted[j]) {
-                float temp = shifted[i];
-                shifted[i] = shifted[j];
-                shifted[j] = temp;
-            }
-        }
+    for (int i = 0; i < 10; i++) {
+        shifted[(i + shift) % 10] = arr[i];
     }
 
     for (int i = 0; i < 10; i++) {
         printf("%.2f ", shifted[i]);
     }
     printf("\n");
+
     return 0;
 }
