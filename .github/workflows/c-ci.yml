@@ -6,15 +6,13 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "homework4" branch
   push:
-<<<<<<< HEAD
+on:
+  push:
     branches: [ "homework4" ]
   pull_request:
     branches: [ "homework4" ]
-=======
-    branches: [ "homework5" ]
-  pull_request:
-    branches: [ "homework5" ]
->>>>>>> b8882fef0e6805602dea9a2e546701644465d17f
+  workflow_dispatch:
+  
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
