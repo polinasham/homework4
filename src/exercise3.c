@@ -1,24 +1,18 @@
-#include <stdio.h>
-int main() {
+int main(int argc,char** argv) {
     float num[10];
-    int K;
-    printf("Введите 10 чисел:\n");
-    for (int i = 0; i < 10; i++) {
-        scanf("%f", &num[i]);
-    }
-    printf("Введите значение K:\n");
-    scanf("%d", &K);
+    scanf("%f %f %f %f %f %f %f %f %f %f", &num[0], &num[1], &num[2], &num[3], &num[4], &num[5], &num[6], &num[7], &num[8], &num[9]);
+    int K = 2;
+    
     if (K < 0) {
-        K += 10;  
+        K = K + 10;
     }
     float print[10];
     for (int i = 0; i < 10; i++) {
         print[(i + K) % 10] = num[i];
     }
-    printf("Результат циклического сдвига:\n");
+
     for (int i = 0; i < 10; i++) {
         printf("%.3f ", print[i]);
     }
-    printf("\n");
     return 0;
 }

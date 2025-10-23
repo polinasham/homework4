@@ -1,13 +1,11 @@
 #include <stdio.h>
-int main() {
+
+int main(int argc,char** argv) {
     float num[10];
-    printf("Введите 10 чисел:\n");
-    for (int i = 0; i < 10; i++) {
-        scanf("%f", &num[i]);
-    }
-    for (int i = 9; i >= 0; i--) {
-        printf("%f ", num[i]);
-    }
-    printf("\n");
+    scanf("%f %f %f %f %f %f %f %f %f %f", &num[0], &num[1], &num[2], &num[3], &num[4], &num[5], &num[6], &num[7], &num[8], &num[9]);
+   for( int i = 9;i>=0;i--){
+    printf("%f ",num[i]);
+   }
+    
     return 0;
 }
